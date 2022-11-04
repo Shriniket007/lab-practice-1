@@ -1,0 +1,12 @@
+PRG2 START
+ USING *,BASE
+            A                       1,DATA1
+            L                       2,DATA9
+            L                       3,DATA3
+            ST                      4,DATA4
+FOUR DC F'4'
+FIVE DC F'5'
+BASE EQU 8
+TEMP DS 1F
+ DROP 8
+ END

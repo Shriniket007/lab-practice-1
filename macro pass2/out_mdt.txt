@@ -1,0 +1,8 @@
+INCR1       &FIRST,&SECOND=DATA9
+A           1,#0
+L           2,#1
+MEND        
+INCR2       &ARG1,&ARG2=DATA5
+L           3,#0
+ST          4,#1
+MEND        
