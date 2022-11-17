@@ -1,66 +1,59 @@
 import java.util.*;
+class fifo{
 
-class fifo
-{
-	public static void main(String[] args)
-	{
-		Scanner s = new Scanner(System.in);	
-		System.out.println("enter the no. of elements:");
-		int n = s.nextInt();
-		int []a = new int[n];
-		
-		for(int i = 0; i < n; i++)
-		{
-			System.out.println("enter element");
-			a[i] = s.nextInt();
-		}
-		/*System.out.println("enter the size of frame:");
-		int size = s.nextInt();*/
-		int[] frame ={0, 0, 0};
-		
+   public static void main(String args[]){
+      Scanner s = new Scanner(System.in);
+      System.out.print("Enter the number of elements : ");
+      int cnt = s.nextInt();
+      
+      char arr[] = new char[cnt];
+      System.out.print("Enter the element : ");
+      for(int i=0; i<cnt; i++){
+	arr[i] = s.next().charAt(0);
+      }
+      System.out.print("Enter the size of frame : ");
+      int fSize = s.nextInt();
+      char frame[] = new char[fSize];
+      
+      int hit = 0;
+      int mis = 0;
+      int ptr = 0;
 
-
-		
-		
-		
-			int hit = 0;
-			int miss = 0;
-			int ptr = 0;
-		for(int i = 0; i < n; i++)
-		{
-			int temp = a[i];
-			boolean ans = false;
-
-		for(int k = 0; k < 3; k++)
-		{
-			if(frame[k] == temp)
-			{
-				ans = true;
-				break;
-			}
-		}
-			if(ans)
-			{
-				hit++;
-			}
-			else
-			{
-				miss++;
-				frame[ptr] = temp;
-				if(ptr == 3 - 1){
-					ptr = 0;
-				}
-				else
-				{
-					ptr++;
-				}
-			}
-		
-
-}
-		System.out.println("the number of hits: "+hit);
-		System.out.println("the number of miss: "+miss);
-		System.out.println("ratio: "+(hit/miss));
-	
-	}
-}
+      
+      for(int i=0; i<cnt; i++){
+      boolean ans = false;
+         for(int j=0; j<fSize; j++){
+            if(arr[i] == frame[j]){
+            	ans = true;
+            	break;
+            }
+         }
+         if(ans){
+         	hit++;
+         	
+         }
+         else{
+            mis++;
+            frame[ptr] = arr[i];
+            
+            if(ptr ==fSize-1){
+               ptr = 0;
+               
+           }
+           else{
+              ptr++;
+          }
+           
+       }
+       for(int k=0; k<fSize; k++){
+          System.out.print(frame[k]+" ");
+       }
+      //  System.out.print(hit+" "+mis);
+       System.out.println();
+    }
+    System.out.println("hits : "+hit);
+    System.out.println("mis : "+mis);
+      
+	      
+   }
+ }
