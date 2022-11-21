@@ -1,11 +1,10 @@
 // Java implementation of Best - Fit algorithm
 
-public class GFG
+public class best_fit
 {
 	// Method to allocate memory to blocks as per Best fit
 	// algorithm
-	static void bestFit(int blockSize[], int m, int processSize[],
-													int n)
+	static void bestFit(int blockSize[], int m, int processSize[], int n)
 	{
 		// Stores block id of the block allocated to a
 		// process
@@ -58,8 +57,8 @@ public class GFG
 	// Driver Method
 	public static void main(String[] args)
 	{
-		int blockSize[] = {100, 50, 30, 120, 35};
-		int processSize[] = {40,10,30,60,35,121};
+		int blockSize[] = {100, 500, 200, 300, 600};
+		int processSize[] = {212, 417, 112, 426};
 		int m = blockSize.length;
 		int n = processSize.length;
 		

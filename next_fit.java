@@ -35,7 +35,9 @@ public class next_fit {
 
 				// mod m will help in traversing the blocks from
 				// starting block after we reach the end.
+				// j = (j + 1);
 				j = (j + 1) % m;
+				//System.out.println(j);
 			}
 		}
 

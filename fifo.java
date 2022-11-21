@@ -9,7 +9,7 @@ class fifo{
       char arr[] = new char[cnt];
       System.out.print("Enter the element : ");
       for(int i=0; i<cnt; i++){
-	arr[i] = s.next().charAt(0);
+	      arr[i] = s.next().charAt(0);
       }
       System.out.print("Enter the size of frame : ");
       int fSize = s.nextInt();
@@ -36,7 +36,7 @@ class fifo{
             mis++;
             frame[ptr] = arr[i];
             
-            if(ptr ==fSize-1){
+            if(ptr == fSize-1){
                ptr = 0;
                
            }

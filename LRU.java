@@ -7,7 +7,7 @@ class LRU
 		Scanner s = new Scanner(System.in);	
 		System.out.println("enter the no. of elements:");
 		int n = s.nextInt();
-		int []a = new int[n];
+		int a[] = new int[n];
 		
 		for(int i = 0; i < n; i++)
 		{
@@ -56,7 +56,10 @@ class LRU
 				}
 			}
 		
-
+			 for(int k=0; k<3; k++){
+          System.out.print(frame[k]+" ");
+       }
+	   System.out.println();
 }
 		System.out.println("the number of hits: "+hit);
 		System.out.println("the number of miss: "+miss);
